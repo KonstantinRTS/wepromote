@@ -1,1 +1,123 @@
 @import "mixin";
+
+
+.footer {
+    padding: 24px 0;
+    background-color: #000000;
+    margin-top: auto;
+    &__container {
+    }
+
+    &__body {
+    }
+
+    &__row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+
+        @media(max-width: 992px) { 
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        &._last { 
+            margin: 16px 0 0 0;
+            justify-content: space-between;
+
+            @media(max-width: 767px) { 
+                flex-direction: column;
+                align-items: flex-start;
+                row-gap: 16px;
+            }
+        }
+    }
+
+    &__col-01 {
+    }
+
+    &__logo {
+        @include adaptiv-value('font-size', 48, 36, 1);
+        line-height: normal;
+        color: #fff;
+        position: relative;
+        z-index: 999;
+    }
+
+    &__col-02 {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+
+        @media(max-width: 992px) { 
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    &__menu {
+        margin: 0 auto;
+
+        @media(max-width: 992px) { 
+            margin: 0;
+        }
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        @include adaptiv-value('gap', 43, 0, 1);
+        @media(max-width: 992px) { 
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 16px;
+        }
+    }
+
+    &__item {
+    }
+
+    &__link {
+        color: #fff;
+        font-family: 'Anuphan', sans-serif;
+        transition: all 0.3s ease 0s;
+
+        &:hover { 
+            color: #E6F355;
+        }
+    }
+
+    &__contacts {
+        display: flex;
+        align-items: center;
+        @include adaptiv-value('gap', 32, 16, 1);
+        @media(max-width: 992px) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    &__contacts-link {
+        font-family: 'Anuphan', sans-serif;
+        display: flex;
+        align-items: center;
+        column-gap: 8px;
+        color: #fff;
+        transition: all 0.3s ease 0s;
+
+        &:hover { 
+            color: #E6F355;
+        }
+    }
+
+    &__text {
+        color: #cbcbcb;
+    }
+
+    &__copy {
+        color: #cbcbcb;
+    }
+}

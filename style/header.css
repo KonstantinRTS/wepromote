@@ -1,7 +1,11 @@
 .header {
   padding: 24px 0;
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   overflow: hidden;
+  z-index: 999;
 }
 .header__body {
   display: flex;
@@ -95,6 +99,11 @@
 @media (max-width: 1024px) {
   .header__link {
     font-size: 40px;
+  }
+}
+@media (max-width: 389px) {
+  .header__link {
+    font-size: 36px;
   }
 }
 .header__email {

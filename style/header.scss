@@ -2,8 +2,12 @@
 
 .header {
     padding: 24px 0;
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     overflow: hidden;
+    z-index: 999;
     &__container {
     }
 
@@ -90,6 +94,10 @@
 
         @media(max-width: 1024px) { 
             font-size: 40px;
+        }
+
+        @media(max-width: 389px) { 
+            font-size: 36px;
         }
     }
 

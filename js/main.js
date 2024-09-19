@@ -21,7 +21,7 @@ $(document).ready(function () {
         $('body').toggleClass('_stop');
     });
 
-    $('.marquee-slider-first').slick({
+    $('.home-last-marquee').slick({
         dots: false,
         arrows: false,
         infinite: true,
@@ -31,7 +31,7 @@ $(document).ready(function () {
         autoplay: true,
         autoplaySpeed: 0,
         /* speed: 25000, */
-        speed: 25000,
+        speed: 10000,
         cssEase: 'linear'
     });
 
