@@ -718,11 +718,10 @@
         color: #fff;
         font-weight: 600;
 
-        &.challenge { 
+        &.challenge {
             position: sticky;
             top: 110px;
         }
-
     }
 
     &__col-02 {
@@ -739,7 +738,7 @@
         height: 724px;
         position: relative;
 
-        @media(max-width: 992px) { 
+        @media (max-width: 992px) {
             height: fit-content;
         }
 
@@ -749,14 +748,14 @@
             transition: all 0.5s ease;
             opacity: 1;
             &.sticky {
-                transform: scale(0.9); 
+                transform: scale(0.9);
             }
 
-            @media(max-width: 992px) { 
+            @media (max-width: 992px) {
                 position: static;
 
-                &.sticky { 
-                    transform: scale(1); 
+                &.sticky {
+                    transform: scale(1);
                 }
             }
         }
@@ -809,7 +808,6 @@
             flex-direction: column;
             align-items: flex-start;
         }
-
     }
 
     &__item-03 {
@@ -832,6 +830,177 @@
 
         .text {
             color: #000000;
+        }
+    }
+}
+
+.home-one {
+    background-color: #313ffe;
+    border-radius: 30px 30px 0 0;
+    margin-top: -50px;
+    @include adaptiv-value("padding-top", 170, 104, 1);
+    @include adaptiv-value("padding-bottom", 200, 104, 1);
+    display: block;
+    @media (max-width: 992px) {
+        border-radius: 0;
+        margin-top: 0;
+    }
+    &__container {
+    }
+
+    &__body {
+        display: flex;
+        gap: 32px;
+        @media(max-width: 992px) { 
+            flex-direction: column;
+        }
+    }
+
+    &__col-01 {
+        width: 50%;
+        @media (max-width: 992px) {
+            width: 100%;
+        }
+    }
+
+    &__wrapper {
+        height: fit-content;
+        &.challenge {
+            position: sticky;
+            top: 110px;
+
+            @media(max-width: 992px) { 
+                position: static;
+            }
+        }
+    }
+
+    &__title {
+        @include adaptiv-value("font-size", 64, 38, 1);
+        line-height: normal;
+        font-weight: 500;
+        color: #fff;
+    }
+
+    &__subtitle {
+        margin: 40px 0 0 0;
+        @include adaptiv-value("font-size", 36, 24, 1);
+        line-height: normal;
+        color: #e6f355;
+        font-weight: 600;
+    }
+
+    &__text {
+        margin: 8px 0 0 0;
+        color: #cbcbcb;
+        max-width: 560px;
+
+        @media (max-width: 992px) {
+            max-width: 100%;
+        }
+    }
+
+    &__col-02 {
+        width: 50%;
+        @media (max-width: 992px) {
+            width: 100%;
+        }
+    }
+
+    &__items {
+    }
+
+    &__item {
+        background-color: #fff;
+        box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.3);
+        border-radius: 24px;
+        padding: 40px;
+        position: sticky;
+        top: 110px;
+        transition: all 0.3s ease 0s;
+        &:not(:last-child) {
+            margin-bottom: 24px;
+        }
+        @media (max-width: 992px) {
+            padding: 32px;
+            position: static;
+        }
+
+        &:nth-child(1) { 
+
+        }
+
+        &:nth-child(2) { 
+            top: 220px;
+        }
+
+        &:nth-child(3) { 
+            top: 330px;
+        }
+
+        &:nth-child(4) { 
+            top: 440px;
+        }
+    }
+
+    &__top {
+        display: flex;
+        align-items: center;
+        column-gap: 24px;
+        @media (max-width: 767px) {
+            align-items: flex-start;
+        }
+        .number {
+            @include adaptiv-value("font-size", 32, 24, 1);
+            line-height: normal;
+            color: #313ffe;
+            font-weight: 600;
+        }
+        .title {
+            @include adaptiv-value("font-size", 36, 24, 1);
+            line-height: normal;
+            color: #000000;
+            font-weight: 600;
+        }
+    }
+
+    &__label {
+        padding: 8px 24px;
+        border-radius: 0 50px 50px 0;
+        background-color: #ebecff;
+        color: #000000;
+        font-weight: 600;
+        width: fit-content;
+        text-align: center;
+        margin: 24px 0 0 0;
+
+        @media(max-width: 767px) { 
+            text-align: start;
+        }
+    }
+
+    &__subtext {
+        margin: 8px 0 0 0;
+        color: #000000;
+    }
+
+    &__link {
+        margin: 40px 0 0 0;
+        padding: 13px 32px;
+        border-radius: 100px;
+        background-color: #e6f355;
+        color: #000000;
+        font-weight: 900;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: fit-content;
+        transition: all 0.3s ease 0s;
+
+        &:hover {
+            background-color: #313ffe;
+            color: #fff;
         }
     }
 }

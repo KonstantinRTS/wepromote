@@ -4,7 +4,7 @@ $ = jQuery;
 $(window).on('load', function () {
 
     $('#preloader').fadeOut('slow', function () {
-        $(this).remove(); 
+        $(this).remove();
     });
 });
 
@@ -35,19 +35,32 @@ $(document).ready(function () {
         cssEase: 'linear'
     });
 
+    /* Якорные ссылки */
+    $('a[href^="#"]').on('click', function (event) {
+        event.preventDefault();
+
+        var target = this.hash;
+        var $target = $(target);
+
+        $('html, body').animate({
+            scrollTop: $target.offset().top
+        }, 800, 'swing');
+    });
+
+    /* Анимация блоков при сролле */
     if (window.innerWidth >= 992) {
 
-        $.fn.isInViewport = function() {
+        $.fn.isInViewport = function () {
             var elementTop = $(this).offset().top;
             var elementBottom = elementTop + $(this).outerHeight();
-    
+
             var viewportTop = $(window).scrollTop();
             var viewportBottom = viewportTop + $(window).height();
-    
+
             return elementBottom > viewportTop && elementTop < viewportBottom;
         };
-        
-        window.addEventListener('scroll', function() {
+
+        window.addEventListener('scroll', function () {
             document.querySelectorAll('.challenge').forEach((item) => {
                 const sticky = item.getBoundingClientRect().top <= 200;
                 if (sticky) {
@@ -56,7 +69,7 @@ $(document).ready(function () {
                     item.classList.remove('sticky');
                 }
             });
-            
+
         });
 
     }
