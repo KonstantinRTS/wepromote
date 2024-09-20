@@ -852,6 +852,7 @@
   row-gap: 32px;
   height: 724px;
   overflow: visible;
+  position: relative;
 }
 .home-fast__items .challenge {
   position: sticky;
