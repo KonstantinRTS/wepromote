@@ -721,7 +721,7 @@
 }
 @media (max-width: 992px) and (max-width: 1344px) {
   .home-last__col-02 {
-    height: calc(370px + 180 * (100vw - 360px) / 984);
+    height: calc(460px + 90 * (100vw - 360px) / 984);
   }
 }
 .home-last__label {
@@ -737,24 +737,28 @@
 }
 .home-last__text {
   margin: 8px 0 0 0;
-  color: #cbcbcb;
+  color: #000000;
   max-width: 440px;
 }
 .home-last__link {
-  margin: 40px 0 0 0;
+  margin: 16px 0 0 0;
   display: flex;
   align-items: center;
-  -moz-column-gap: 8px;
-       column-gap: 8px;
-  color: #000000;
-}
-.home-last__link span {
+  flex-wrap: wrap;
+  gap: 8px;
   color: #313ffe;
   font-weight: 600;
   transition: all 0.3s ease 0s;
 }
-.home-last__link:hover span {
+.home-last__link span {
+  color: #000000;
+  font-weight: 400;
+}
+.home-last__link:hover {
   color: #e6f355;
+}
+.home-last__link:hover span {
+  color: #000000;
 }
 .home-last__slider {
   background-color: #e6f355;
@@ -854,8 +858,30 @@
   flex-direction: column;
   row-gap: 32px;
   height: 724px;
-  overflow: visible;
   position: relative;
+}
+@media (max-width: 992px) {
+  .home-fast__items {
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+.home-fast__items .challenge {
+  position: sticky;
+  top: 110px;
+  transition: all 0.5s ease;
+  opacity: 1;
+}
+.home-fast__items .challenge.sticky {
+  transform: scale(0.9);
+}
+@media (max-width: 992px) {
+  .home-fast__items .challenge {
+    position: static;
+  }
+  .home-fast__items .challenge.sticky {
+    transform: scale(1);
+  }
 }
 .home-fast__item-01 {
   display: flex;
@@ -871,15 +897,6 @@
     flex-direction: column;
     align-items: flex-start;
   }
-}
-.home-fast__item-01.challenge {
-  position: sticky;
-  top: 110px;
-  transition: all 0.5s ease;
-  opacity: 1;
-}
-.home-fast__item-01.challenge.sticky {
-  transform: scale(0.9);
 }
 .home-fast__image {
   width: 140px;
@@ -912,15 +929,6 @@
     align-items: flex-start;
   }
 }
-.home-fast__item-02.challenge {
-  position: sticky;
-  top: 200px;
-  transition: all 0.5s ease;
-  opacity: 1;
-}
-.home-fast__item-02.challenge.sticky {
-  transform: scale(0.9);
-}
 .home-fast__item-03 {
   display: flex;
   align-items: center;
@@ -941,13 +949,4 @@
 }
 .home-fast__item-03 .text {
   color: #000000;
-}
-.home-fast__item-03.challenge {
-  position: sticky;
-  top: 300px;
-  transition: all 0.5s ease;
-  opacity: 1;
-}
-.home-fast__item-03.challenge.sticky {
-  transform: scale(0.9);
 }/*# sourceMappingURL=home.css.map */

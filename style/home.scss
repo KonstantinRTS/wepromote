@@ -620,7 +620,7 @@
         overflow: hidden;
         @media (max-width: 992px) {
             width: 100%;
-            @include adaptiv-value("height", 550, 370, 1);
+            @include adaptiv-value("height", 550, 460, 1);
             padding: 32px;
         }
     }
@@ -634,26 +634,29 @@
 
     &__text {
         margin: 8px 0 0 0;
-        color: #cbcbcb;
+        color: #000000;
         max-width: 440px;
     }
 
     &__link {
-        margin: 40px 0 0 0;
+        margin: 16px 0 0 0;
         display: flex;
         align-items: center;
-        column-gap: 8px;
-        color: #000000;
+        flex-wrap: wrap;
+        gap: 8px;
+        color: #313ffe;
+        font-weight: 600;
+        transition: all 0.3s ease 0s;
 
         span {
-            color: #313ffe;
-            font-weight: 600;
-            transition: all 0.3s ease 0s;
+            color: #000000;
+            font-weight: 400;
         }
 
         &:hover {
+            color: #e6f355;
             span {
-                color: #e6f355;
+                color: #000000;
             }
         }
     }
@@ -734,8 +737,29 @@
         flex-direction: column;
         row-gap: 32px;
         height: 724px;
-        overflow: visible;
         position: relative;
+
+        @media(max-width: 992px) { 
+            height: fit-content;
+        }
+
+        .challenge {
+            position: sticky;
+            top: 110px;
+            transition: all 0.5s ease;
+            opacity: 1;
+            &.sticky {
+                transform: scale(0.9); 
+            }
+
+            @media(max-width: 992px) { 
+                position: static;
+
+                &.sticky { 
+                    transform: scale(1); 
+                }
+            }
+        }
     }
 
     &__item-01 {
@@ -750,16 +774,6 @@
             padding: 32px;
             flex-direction: column;
             align-items: flex-start;
-        }
-
-        &.challenge {
-            position: sticky;
-            top: 110px;
-            transition: all 0.5s ease;
-            opacity: 1;
-            &.sticky {
-                transform: scale(0.9); 
-            }
         }
     }
 
@@ -796,15 +810,6 @@
             align-items: flex-start;
         }
 
-        &.challenge {
-            position: sticky;
-            top: 200px;
-            transition: all 0.5s ease;
-            opacity: 1;
-            &.sticky {
-                transform: scale(0.9); 
-            }
-        }
     }
 
     &__item-03 {
@@ -827,16 +832,6 @@
 
         .text {
             color: #000000;
-        }
-
-        &.challenge {
-            position: sticky;
-            top: 300px;
-            transition: all 0.5s ease;
-            opacity: 1;
-            &.sticky {
-                transform: scale(0.9); 
-            }
         }
     }
 }
