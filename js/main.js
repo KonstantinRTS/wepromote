@@ -45,6 +45,12 @@ $(document).ready(function () {
         $('html, body').animate({
             scrollTop: $target.offset().top
         }, 800, 'swing');
+
+        if ($(window).width() <= 992) {
+            $('.header__wrapper').removeClass('_active');
+            $('.header__btn-menu').removeClass('_active');
+            $('body').removeClass('_stop');
+        }
     });
 
     /* Анимация блоков при сролле */

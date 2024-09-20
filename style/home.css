@@ -958,6 +958,10 @@
   padding-top: 170px;
   padding-bottom: 200px;
   display: block;
+  background-image: url("../image/home-10.webp");
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: 840px;
 }
 @media (max-width: 1344px) {
   .home-one {
@@ -973,6 +977,15 @@
   .home-one {
     border-radius: 0;
     margin-top: 0;
+    background-image: none;
+  }
+}
+@media (max-width: 575px) {
+  .home-one {
+    background-image: url("../image/home-10.webp");
+    padding-bottom: 320px;
+    background-position: center 98%;
+    background-size: contain;
   }
 }
 .home-one__body {
