@@ -64,6 +64,9 @@
     right: 0;
   }
 }
+.header__menu {
+  margin: 0 auto;
+}
 .header__list {
   display: flex;
   align-items: center;
