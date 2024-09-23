@@ -878,6 +878,7 @@
         @media (max-width: 992px) {
             width: 100%;
         }
+        padding-bottom: 400px;
     }
 
     &__wrapper {
@@ -922,6 +923,77 @@
         @media (max-width: 992px) {
             width: 100%;
         }
+
+        &._full { 
+
+           /*  .challenge { 
+                &:nth-child(1) { 
+                    position: relative;
+                    top: auto;
+                    bottom: -650px;
+                }
+
+                &:nth-child(2) { 
+                    position: relative;
+                    top: auto;
+                    bottom: -400px;
+                }
+
+                &:nth-child(3) { 
+                    position: relative;
+                    top: auto;
+                    bottom: -150px;
+                }
+
+                &:nth-child(4) { 
+                    position: relative;
+                    top: auto;
+                    bottom: 100px;
+                }
+            } */
+
+            .challenge { 
+                &:nth-child(1) { 
+                    position: relative;
+                    top: auto;
+                    bottom: -650px;
+
+                    @media(max-width: 992px) {
+                        position: static;
+                    }
+                }
+
+                &:nth-child(2) { 
+                    position: relative;
+                    top: auto;
+                    bottom: -400px;
+
+                    @media(max-width: 992px) {
+                        position: static;
+                    }
+                }
+
+                &:nth-child(3) { 
+                    position: relative;
+                    top: auto;
+                    bottom: -150px;
+
+                    @media(max-width: 992px) {
+                        position: static;
+                    }
+                }
+
+                &:nth-child(4) { 
+                    position: relative;
+                    top: auto;
+                    bottom: 100px;
+
+                    @media(max-width: 992px) {
+                        position: static;
+                    }
+                }
+            }
+        }
     }
 
     &__items {
@@ -944,23 +1016,23 @@
         }
 
         &:nth-child(1) { 
-            /* top: 110px; */
-            top: 6vw;
+            top: 110px;
         }
 
         &:nth-child(2) { 
-            /* top: 220px; */
-            top: 12vw;
+            top: 220px;
         }
 
         &:nth-child(3) { 
-            /* top: 330px; */
-            top: 18vw;
+            top: 330px;
         }
 
         &:nth-child(4) { 
-           /*  top: 440px; */
-            top: 24vw;
+            top: 440px;
+        }
+
+        @media(max-width: 992px) { 
+            position: static;
         }
     }
 

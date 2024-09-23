@@ -1005,6 +1005,7 @@
 }
 .home-one__col-01 {
   width: 50%;
+  padding-bottom: 400px;
 }
 @media (max-width: 992px) {
   .home-one__col-01 {
@@ -1065,6 +1066,73 @@
     width: 100%;
   }
 }
+.home-one__col-02._full {
+  /*  .challenge { 
+       &:nth-child(1) { 
+           position: relative;
+           top: auto;
+           bottom: -650px;
+       }
+
+       &:nth-child(2) { 
+           position: relative;
+           top: auto;
+           bottom: -400px;
+       }
+
+       &:nth-child(3) { 
+           position: relative;
+           top: auto;
+           bottom: -150px;
+       }
+
+       &:nth-child(4) { 
+           position: relative;
+           top: auto;
+           bottom: 100px;
+       }
+   } */
+}
+.home-one__col-02._full .challenge:nth-child(1) {
+  position: relative;
+  top: auto;
+  bottom: -650px;
+}
+@media (max-width: 992px) {
+  .home-one__col-02._full .challenge:nth-child(1) {
+    position: static;
+  }
+}
+.home-one__col-02._full .challenge:nth-child(2) {
+  position: relative;
+  top: auto;
+  bottom: -400px;
+}
+@media (max-width: 992px) {
+  .home-one__col-02._full .challenge:nth-child(2) {
+    position: static;
+  }
+}
+.home-one__col-02._full .challenge:nth-child(3) {
+  position: relative;
+  top: auto;
+  bottom: -150px;
+}
+@media (max-width: 992px) {
+  .home-one__col-02._full .challenge:nth-child(3) {
+    position: static;
+  }
+}
+.home-one__col-02._full .challenge:nth-child(4) {
+  position: relative;
+  top: auto;
+  bottom: 100px;
+}
+@media (max-width: 992px) {
+  .home-one__col-02._full .challenge:nth-child(4) {
+    position: static;
+  }
+}
 .home-one__items {
   position: relative;
 }
@@ -1086,20 +1154,21 @@
   }
 }
 .home-one__item:nth-child(1) {
-  /* top: 110px; */
-  top: 6vw;
+  top: 110px;
 }
 .home-one__item:nth-child(2) {
-  /* top: 220px; */
-  top: 12vw;
+  top: 220px;
 }
 .home-one__item:nth-child(3) {
-  /* top: 330px; */
-  top: 18vw;
+  top: 330px;
 }
 .home-one__item:nth-child(4) {
-  /*  top: 440px; */
-  top: 24vw;
+  top: 440px;
+}
+@media (max-width: 992px) {
+  .home-one__item {
+    position: static;
+  }
 }
 .home-one__top {
   display: flex;

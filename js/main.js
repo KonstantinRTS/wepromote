@@ -54,34 +54,34 @@ $(document).ready(function () {
     });
 
     /* Анимация блоков при сролле */
-     if (window.innerWidth >= 992) {
+    /* if (window.innerWidth >= 992) {
  
-         $.fn.isInViewport = function () {
-             var elementTop = $(this).offset().top;
-             var elementBottom = elementTop + $(this).outerHeight();
+        $.fn.isInViewport = function () {
+            var elementTop = $(this).offset().top;
+            var elementBottom = elementTop + $(this).outerHeight();
  
-             var viewportTop = $(window).scrollTop();
-             var viewportBottom = viewportTop + $(window).height();
+            var viewportTop = $(window).scrollTop();
+            var viewportBottom = viewportTop + $(window).height();
  
-             return elementBottom > viewportTop && elementTop < viewportBottom;
-         };
+            return elementBottom > viewportTop && elementTop < viewportBottom;
+        };
  
-         window.addEventListener('scroll', function () {
-             document.querySelectorAll('.challenge').forEach((item) => {
-                 const sticky = item.getBoundingClientRect().top <= 300;
-                 if (sticky) {
-                     item.classList.add('sticky');
-                 } else {
-                     item.classList.remove('sticky');
-                 }
-             });
-         });
-     }
-
-   /*  if (window.innerWidth >= 992) {
+        window.addEventListener('scroll', function () {
+            document.querySelectorAll('.challenge').forEach((item) => {
+                const sticky = item.getBoundingClientRect().top <= 300;
+                if (sticky) {
+                    item.classList.add('sticky');
+                } else {
+                    item.classList.remove('sticky');
+                }
+            });
+        });
+    }
+*/
+    if (window.innerWidth >= 992) {
         const offsets = [200, 300, 400, 500];
         const elements = document.querySelectorAll('.challenge');
-        const fullBlock = document.querySelector('.home-one__col-02'); 
+        const fullBlock = document.querySelector('.home-one__col-02');
         window.addEventListener('scroll', function () {
             elements.forEach((item, index) => {
                 const itemRect = item.getBoundingClientRect();
@@ -97,7 +97,7 @@ $(document).ready(function () {
 
                 if (fullBlock) {
                     const fullBlockRect = fullBlock.getBoundingClientRect();
-                    const isAtBottom = fullBlockRect.bottom <= window.innerHeight + 50; 
+                    const isAtBottom = fullBlockRect.bottom <= window.innerHeight + 50;
                     if (isAtBottom) {
                         fullBlock.classList.add('_full');
                     } else {
@@ -106,6 +106,6 @@ $(document).ready(function () {
                 }
             });
         });
-    } */
+    }
 
 });
