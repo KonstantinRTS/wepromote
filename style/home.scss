@@ -875,10 +875,11 @@
 
     &__col-01 {
         width: 50%;
+        padding-bottom: 400px;
         @media (max-width: 992px) {
             width: 100%;
+            padding-bottom: 0;
         }
-        padding-bottom: 400px;
     }
 
     &__wrapper {

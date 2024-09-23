@@ -1010,6 +1010,7 @@
 @media (max-width: 992px) {
   .home-one__col-01 {
     width: 100%;
+    padding-bottom: 0;
   }
 }
 .home-one__wrapper {
