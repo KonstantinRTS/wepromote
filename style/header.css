@@ -21,16 +21,9 @@
   }
 }
 .header__logo {
-  font-size: 48px;
-  line-height: normal;
-  color: #fff;
   position: relative;
   z-index: 999;
-}
-@media (max-width: 1344px) {
-  .header__logo {
-    font-size: calc(36px + 12 * (100vw - 360px) / 984);
-  }
+  display: flex;
 }
 .header__col-02 {
   width: 100%;

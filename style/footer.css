@@ -13,16 +13,9 @@
   }
 }
 .footer__logo {
-  font-size: 48px;
-  line-height: 100%;
-  color: #fff;
   position: relative;
   z-index: 999;
-}
-@media (max-width: 1344px) {
-  .footer__logo {
-    font-size: calc(36px + 12 * (100vw - 360px) / 984);
-  }
+  display: flex;
 }
 .footer__text {
   margin: 16px 0 0 0;

@@ -22,11 +22,9 @@
     }
 
     &__logo {
-        @include adaptiv-value('font-size', 48, 36, 1);
-        line-height: normal;
-        color: #fff;
         position: relative;
         z-index: 999;
+        display: flex;
     }
 
     &__col-02 {

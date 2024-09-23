@@ -867,6 +867,7 @@
     &__body {
         display: flex;
         gap: 32px;
+        height: fit-content;
         @media(max-width: 992px) { 
             flex-direction: column;
         }
@@ -924,6 +925,7 @@
     }
 
     &__items {
+        position: relative;
     }
 
     &__item {
@@ -932,7 +934,6 @@
         border-radius: 24px;
         padding: 40px;
         position: sticky;
-        top: 110px;
         transition: all 0.3s ease 0s;
         &:not(:last-child) {
             margin-bottom: 24px;
@@ -943,19 +944,23 @@
         }
 
         &:nth-child(1) { 
-
+            /* top: 110px; */
+            top: 6vw;
         }
 
         &:nth-child(2) { 
-            top: 220px;
+            /* top: 220px; */
+            top: 12vw;
         }
 
         &:nth-child(3) { 
-            top: 330px;
+            /* top: 330px; */
+            top: 18vw;
         }
 
         &:nth-child(4) { 
-            top: 440px;
+           /*  top: 440px; */
+            top: 24vw;
         }
     }
 

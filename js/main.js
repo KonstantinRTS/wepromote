@@ -54,28 +54,58 @@ $(document).ready(function () {
     });
 
     /* Анимация блоков при сролле */
-    if (window.innerWidth >= 992) {
+     if (window.innerWidth >= 992) {
+ 
+         $.fn.isInViewport = function () {
+             var elementTop = $(this).offset().top;
+             var elementBottom = elementTop + $(this).outerHeight();
+ 
+             var viewportTop = $(window).scrollTop();
+             var viewportBottom = viewportTop + $(window).height();
+ 
+             return elementBottom > viewportTop && elementTop < viewportBottom;
+         };
+ 
+         window.addEventListener('scroll', function () {
+             document.querySelectorAll('.challenge').forEach((item) => {
+                 const sticky = item.getBoundingClientRect().top <= 300;
+                 if (sticky) {
+                     item.classList.add('sticky');
+                 } else {
+                     item.classList.remove('sticky');
+                 }
+             });
+         });
+     }
 
-        $.fn.isInViewport = function () {
-            var elementTop = $(this).offset().top;
-            var elementBottom = elementTop + $(this).outerHeight();
-
-            var viewportTop = $(window).scrollTop();
-            var viewportBottom = viewportTop + $(window).height();
-
-            return elementBottom > viewportTop && elementTop < viewportBottom;
-        };
-
+   /*  if (window.innerWidth >= 992) {
+        const offsets = [200, 300, 400, 500];
+        const elements = document.querySelectorAll('.challenge');
+        const fullBlock = document.querySelector('.home-one__col-02'); 
         window.addEventListener('scroll', function () {
-            document.querySelectorAll('.challenge').forEach((item) => {
-                const sticky = item.getBoundingClientRect().top <= 200;
+            elements.forEach((item, index) => {
+                const itemRect = item.getBoundingClientRect();
+                const offset = offsets[index] || 0;
+
+                const sticky = itemRect.top <= offset;
+
                 if (sticky) {
-                    item.classList.add('sticky');
+                    item.classList.add('qwerty');
                 } else {
-                    item.classList.remove('sticky');
+                    item.classList.remove('qwerty');
+                }
+
+                if (fullBlock) {
+                    const fullBlockRect = fullBlock.getBoundingClientRect();
+                    const isAtBottom = fullBlockRect.bottom <= window.innerHeight + 50; 
+                    if (isAtBottom) {
+                        fullBlock.classList.add('_full');
+                    } else {
+                        fullBlock.classList.remove('_full');
+                    }
                 }
             });
-
         });
-    }
+    } */
+
 });
