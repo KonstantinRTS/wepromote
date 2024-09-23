@@ -9,13 +9,9 @@
     background-repeat: no-repeat;
     background-size: contain;
 
-    @media (max-width: 1649px) {
-        background-size: 800px;
-    }
-
-    @media (max-width: 1325px) {
-        background-size: 600px;
-    }
+    /* @media (max-width: 1649px) {
+        background-size: 800px; 
+    } */
 
     @media (max-width: 992px) {
         background-image: none;
@@ -175,7 +171,7 @@
     background-color: #15151f;
     border-radius: 30px 30px 0 0;
     @include adaptiv-value("padding-top", 200, 104, 1);
-    @include adaptiv-value("padding-bottom", 200, 104, 1);
+    @include adaptiv-value("padding-bottom", 250, 104, 1);
     @media (max-width: 992px) {
         border-radius: 0;
     }
@@ -350,6 +346,9 @@
         margin: 8px 0 0 0;
         text-align: center;
         color: #cbcbcb;
+        @media(max-width: 992px) { 
+            text-align: start;
+        }
     }
 
     &__items {
@@ -421,6 +420,7 @@
     background-size: cover;
     @media (max-width: 992px) {
         border-radius: 0;
+        margin-top: 0;
     }
     &__container {
     }
@@ -433,6 +433,10 @@
         line-height: normal;
         text-align: center;
         font-weight: 500;
+
+        @media(max-width: 992px) { 
+            line-height: 100%;
+        }
     }
 
     &__items {
@@ -472,7 +476,7 @@
     background-color: #313ffe;
     border-radius: 30px 30px 0 0;
     margin-top: -50px;
-    @include adaptiv-value("padding-top", 170, 104, 1);
+    @include adaptiv-value("padding-top", 200, 104, 1);
     @include adaptiv-value("padding-bottom", 200, 104, 1);
     @media (max-width: 992px) {
         border-radius: 0;
@@ -560,7 +564,7 @@
     background-color: #15151f;
     border-radius: 30px 30px 0 0;
     margin-top: -50px;
-    @include adaptiv-value("padding-top", 170, 104, 1);
+    @include adaptiv-value("padding-top", 200, 104, 1);
     @include adaptiv-value("padding-bottom", 200, 104, 1);
     @media (max-width: 992px) {
         border-radius: 0;
@@ -685,7 +689,7 @@
     background-color: #000000;
     border-radius: 30px 30px 0 0;
     margin-top: -50px;
-    @include adaptiv-value("padding-top", 170, 104, 1);
+    @include adaptiv-value("padding-top", 200, 104, 1);
     @include adaptiv-value("padding-bottom", 200, 104, 1);
     display: block;
     @media (max-width: 992px) {
@@ -838,8 +842,8 @@
     background-color: #313ffe;
     border-radius: 30px 30px 0 0;
     margin-top: -50px;
-    @include adaptiv-value("padding-top", 170, 104, 1);
-    @include adaptiv-value("padding-bottom", 200, 104, 1);
+    @include adaptiv-value("padding-top", 200, 104, 1);
+    @include adaptiv-value("padding-bottom", 250, 104, 1);
     display: block;
     background-image: url('../image/home-10.webp');
     background-repeat: no-repeat;

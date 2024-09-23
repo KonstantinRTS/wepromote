@@ -249,6 +249,11 @@
     font-size: calc(38px + 26 * (100vw - 360px) / 984);
   }
 }
+@media (max-width: 992px) {
+  .contact-last__title br {
+    display: none;
+  }
+}
 .contact-last__text {
   margin: 8px 0 0 0;
   text-align: center;
